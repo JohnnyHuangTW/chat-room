@@ -1,0 +1,18 @@
+.message {
+  margin: 10px;
+}
+
+.message__label {
+  font-size: 14px;
+  color: #666;
+}
+
+.card {
+  margin-top: 5px;
+  padding: 10px;
+  width: fit-content;
+}
+
+.card__content {
+  padding: 8px !important;
+}

@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import './InputField.css'
 import { makeStyles } from '@material-ui/core/styles'
-import FormControl from '@material-ui/core/FormControl'
-import TextField from '@material-ui/core/TextField'
+import { FormControl, TextField, IconButton } from '@material-ui/core'
+
 import SendIcon from '@material-ui/icons/Send'
-import IconButton from '@material-ui/core/IconButton'
 
 const useStyles = makeStyles({
   underline: {

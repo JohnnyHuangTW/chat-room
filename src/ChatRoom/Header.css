@@ -1,7 +1,8 @@
 .header {
   display: flex;
-  height: 50px;
-  padding: 20px;
+  height: 90px;
+  padding: 20px 30px;
+  box-sizing: border-box;
   border-bottom: 1px solid #eee;
   font-size: 25px;
   font-weight: bold;
