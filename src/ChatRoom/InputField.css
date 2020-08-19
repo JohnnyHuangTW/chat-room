@@ -1,0 +1,15 @@
+.input {
+  height: 50px;
+  border-top: 1px solid #eee;
+}
+
+.input__form {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.input__form__formControl {
+  flex: 1;
+}
