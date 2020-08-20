@@ -6,6 +6,7 @@ import { user } from '../service/user'
 
 const Messages = () => {
   const [messages, setMessages] = useState([])
+  const username = user.username()
   useEffect(() => {
     db.collection('messages')
       .orderBy('timestamp', 'asc')
@@ -18,9 +19,12 @@ const Messages = () => {
 
   return (
     <div className="messages">
-      {messages.map(message => (
-        <Message key={message.username} username={'Johnny'} message={message} />
-      ))}
+      {messages.map(
+        message =>
+          message.timestamp && (
+            <Message key={message.username} username={username} message={message} />
+          )
+      )}
     </div>
   )
 }

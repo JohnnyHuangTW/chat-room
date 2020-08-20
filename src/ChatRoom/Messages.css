@@ -1,4 +1,5 @@
 .messages {
+  overflow: overlay;
   height: calc(100vh - 185px);
   background-color: #eee;
   padding: 20px;

@@ -1,0 +1,14 @@
+.setting__content {
+  min-width: 300px;
+  padding: 0 20px 20px 20px;
+}
+
+.setting__input {
+  width: 100%;
+}
+
+.setting__actions {
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: row-reverse;
+}

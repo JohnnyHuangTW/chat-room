@@ -4,7 +4,7 @@ import { Card, CardContent, Typography } from '@material-ui/core'
 
 const Message = ({ username, message }) => {
   const isUser = username === message.username
-  const date = message.timestamp.toDate()
+  const date = message.timestamp && message.timestamp.toDate()
   return (
     <div className={`message ${isUser && 'message__user'}`}>
       <div>
