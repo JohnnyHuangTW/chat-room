@@ -5,10 +5,10 @@ import Messages from './Messages'
 import InputField from './InputField'
 import Paper from '@material-ui/core/Paper'
 
-const ChatRoom = () => {
+const ChatRoom = ({ onChangeName }) => {
   return (
     <Paper className="chatroom" variant="outlined" square>
-      <Header />
+      <Header onChangeName={onChangeName} />
       <Messages />
       <InputField />
     </Paper>

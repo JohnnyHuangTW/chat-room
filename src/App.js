@@ -24,14 +24,23 @@ function App() {
     setModalVisible(false)
   }
 
+  const handleChangeName = () => {
+    setModalVisible(true)
+  }
+
   return (
     <Grid className="app__container" container justify="center" spacing={1}>
       {/* Chat Room */}
       <Grid item xs={12} md={6}>
-        <ChatRoom />
+        <ChatRoom onChangeName={handleChangeName} />
       </Grid>
 
-      <SettingModal onClose={onCloseHandler} visible={modalVisible} onSubmit={onSubmitHandler} />
+      <SettingModal
+        onClose={onCloseHandler}
+        visible={modalVisible}
+        onSubmit={onSubmitHandler}
+        onCancel={() => setModalVisible(false)}
+      />
     </Grid>
   )
 }
