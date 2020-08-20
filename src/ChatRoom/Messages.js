@@ -12,6 +12,7 @@ const Messages = () => {
   useEffect(() => {
     db.collection('messages')
       .orderBy('timestamp', 'asc')
+      .limitToLast(50)
       .onSnapshot(snapshot => {
         const newMessages = snapshot.docs.map(doc => ({ id: doc.id, data: doc.data() }))
         // console.log('fetch new messages', newMessages)

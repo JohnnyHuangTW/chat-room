@@ -1,6 +1,6 @@
 .messages {
   overflow: overlay;
-  height: calc(100vh - 185px);
+  height: calc(100vh - 155px);
   background-color: #eee;
   padding: 20px;
 }
