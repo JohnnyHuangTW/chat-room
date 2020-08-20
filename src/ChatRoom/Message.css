@@ -1,10 +1,22 @@
 .message {
   margin: 10px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .message__label {
   font-size: 14px;
   color: #666;
+}
+
+.message__user {
+  flex-direction: row-reverse;
+}
+
+.message__timestamp {
+  margin: 0 10px;
+  color: #9E9E9E;
+  font-size: 14px;
 }
 
 .card {
@@ -14,9 +26,10 @@
 }
 
 .card__user {
-  margin-left: auto;
-  background-color: #e0f2f1 !important;
+  background-color: #7986cb !important;
+  color: #fff !important;
 }
+
 
 .card__content {
   padding: 8px !important;
