@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react'
+import moment from 'moment'
 import './Message.css'
 import { Card, CardContent, Typography } from '@material-ui/core'
 
@@ -15,9 +16,7 @@ const Message = forwardRef(({ username, message }, ref) => {
           </CardContent>
         </Card>
       </div>
-      <div className="message__timestamp">
-        {date.getHours()}:{date.getMinutes()}
-      </div>
+      <div className="message__timestamp">{moment(date).format('LT').toString()}</div>
     </div>
   )
 })
