@@ -4,3 +4,8 @@
   background-color: #eee;
   padding: 20px;
 }
+
+#dummy-scroll-btm {
+  float: left;
+  clear: both;
+}
