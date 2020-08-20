@@ -13,6 +13,11 @@
   width: fit-content;
 }
 
+.card__user {
+  margin-left: auto;
+  background-color: #e0f2f1 !important;
+}
+
 .card__content {
   padding: 8px !important;
 }

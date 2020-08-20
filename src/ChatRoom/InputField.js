@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import './InputField.css'
 import { makeStyles } from '@material-ui/core/styles'
 import { FormControl, TextField, IconButton } from '@material-ui/core'
-
+import firebase from 'firebase'
 import SendIcon from '@material-ui/icons/Send'
+import db from '../service/firebase'
+import { user } from '../service/user'
 
 const useStyles = makeStyles({
   underline: {
@@ -22,7 +24,11 @@ const InputField = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    // TODO: append message
+    db.collection('messages').add({
+      username: user.username() || 'unknown',
+      text: input,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    })
     setInput('')
   }
   return (
