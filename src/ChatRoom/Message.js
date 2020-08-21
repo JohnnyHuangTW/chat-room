@@ -19,6 +19,13 @@ const avatarColors = [
   '#17BEBB'
 ]
 
+const avatarNameGenerator = name => {
+  const splitName = name.split(' ')
+  const firstChar = splitName[0].charAt(0).toUpperCase()
+  const secChar = splitName[1] && splitName[1].charAt(0).toUpperCase() || ""
+  return firstChar + secChar
+}
+
 const Message = forwardRef(({ username, message }, ref) => {
   const isUser = username === message.username
   const date = message.timestamp && message.timestamp.toDate()
@@ -40,11 +47,9 @@ const Message = forwardRef(({ username, message }, ref) => {
     <div ref={ref} className={`message ${isUser && 'message__user'}`}>
       {!isUser ? (
         <Fragment>
-          <Avatar
-            alt={message.username || 'Unknown User'}
-            src={message.username}
-            className={useStyles().avatar}
-          />
+          <Avatar className={useStyles().avatar}>
+            {avatarNameGenerator(message.username) || 'UU'}
+          </Avatar>
           <div className="message__wrapper">
             <div className="message__title">
               <div className="message__name">{message.username || 'Unknown User'}</div>
