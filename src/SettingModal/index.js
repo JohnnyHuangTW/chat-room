@@ -25,7 +25,7 @@ const SettingModal = props => {
       disableEscapeKeyDown={true}
     >
       <DialogTitle>{isNewUser ? 'WELCOME!' : 'SETTING'}</DialogTitle>
-      <form autoComplete="off">
+      <form autoComplete="off" className="setting__form">
         <div className="setting__content">
           <PersonIcon style={{ marginRight: '10px' }} />
           <TextField

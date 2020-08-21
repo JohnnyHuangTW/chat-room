@@ -1,12 +1,15 @@
+.setting__form {
+  min-width: 300px;
+}
+
 .setting__content {
   display: flex;
   align-items: center;
-  min-width: 300px;
   padding: 0 20px 20px 20px;
 }
 
 .setting__input {
-  width: 100%;
+  flex: 1;
 }
 
 .setting__actions {
