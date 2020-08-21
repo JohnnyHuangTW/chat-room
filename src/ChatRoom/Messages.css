@@ -1,8 +1,8 @@
 .messages {
   overflow: overlay;
-  height: calc(100vh - 155px);
+  height: calc(100vh - 130px);
   background-color: #eee;
-  padding: 20px;
+  padding: 10px;
 }
 
 #dummy-scroll-btm {
