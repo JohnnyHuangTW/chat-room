@@ -22,7 +22,7 @@ const Header = ({ onChangeName }) => {
 
   return (
     <div className="header">
-      <div>CHAT ROOM</div>
+      <div>THE FOOD COURT</div>
       <IconButton aria-controls="menu" aria-haspopup="true" onClick={handleClick}>
         <MoreVertIcon />
       </IconButton>
